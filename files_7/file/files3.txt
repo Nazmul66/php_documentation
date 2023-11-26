@@ -1,0 +1,4 @@
+nazmul,hassan,25,10,25
+kabir,hassan,20,7,8
+jannat,priti,22,9,18
+miftaul,mitu,16,10,1
