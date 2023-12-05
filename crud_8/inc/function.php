@@ -149,6 +149,18 @@
     $maxId = max(array_column($studentId, 'id'));
     return $maxId + 1;
  }
-  
 
+ function is_admin() {
+    return  isset($_SESSION['role']) && "admin" == $_SESSION['role'];  
+ }
+
+ function is_editor() {
+    return  isset($_SESSION['role']) && "editor" == $_SESSION['role'];  
+ }
+
+//  function has_privilege() {
+//     return (is_admin() || is_editor());
+//  }
+
+ 
 ?>

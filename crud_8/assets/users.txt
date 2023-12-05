@@ -1,0 +1,3 @@
+admin,d033e22ae348aeb5660fc2140aec35850c4da997,admin
+student,204036a1ef6e7360e536300ea78c6aeb4a9333dd,student
+editor,ab41949825606da179db7c89ddcedcc167b64847,editor

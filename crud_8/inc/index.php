@@ -1,10 +1,17 @@
-<?php require "../inc/function.php"; 
+<?php 
+   session_start();
+   require "../inc/function.php"; 
 
    $task = $_GET['task'] ?? "report";
    $error = $_GET['error'] ?? "0";
 
    // delete student data
    if( "delete" === $task ){
+      if( !is_admin() ) {
+         header("location: index.php?task=report");
+         // die(); or
+         return;
+      }
       $id = filter_input( INPUT_GET, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
       deleteStudent($id);
       header("location: index.php?task=report");
@@ -36,7 +43,6 @@
            else{
              $error = 1;
            }
-            
        }
    }
 
@@ -57,7 +63,6 @@
          else{
             $error = 1;
          }
-
       }
    }
    
@@ -81,15 +86,27 @@
                         <li class="nav-item">
                            <a class="nav-link active text-warning-emphasis" aria-current="page" href="index.php?task=report">All Students</a>
                         </li>
+                        <?php if(is_admin() || is_editor()): ?>
                         <li class="nav-item">
                            <a class="nav-link text-warning-emphasis" href="index.php?task=add">Add new students</a>
                         </li>
+                        <?php endif; ?>
                         <li class="nav-item">
-                           <a class="nav-link text-warning-emphasis" href="index.php?task=seed">Seed</a>
+                           <?php if(is_admin()): ?>
+                              <a class="nav-link text-warning-emphasis" href="index.php?task=seed">Seed</a>
+                           <?php endif; ?>
                         </li>
                     </ul>
                 </div>
-            </div>
+
+                <div class="">
+                  <?php if(!isset($_SESSION['loggedIn'])):  ?>
+                    <a href="../inc/auth.php" style="cursor: pointer; text-decoration: none;">Log In</a>
+                  <?php else: ?>
+                     <a href="../inc/auth.php?logout=true" style="cursor: pointer; text-decoration: none;">Log out (<?php if(isset($_SESSION['role'])){ echo $_SESSION['role']; } ?>)</a>
+                  <?php endif; ?>
+                </div>
+              </div>
             </nav>
        </div>
 
@@ -123,7 +140,9 @@
                     <th scope="col">Name</th>
                     <th scope="col">Roll</th>
                     <th scope="col">Phone</th>
-                    <th scope="col">Action</th>
+                    <?php if ( is_admin() || is_editor() ): ?>
+                       <th scope="col">Action</th>
+                    <?php endif; ?>
                   </tr>
                 </thead>
                 <tbody>
@@ -131,16 +150,26 @@
                    $students = generateReport(); 
                    foreach ($students as $student){
                 ?> 
-                    <tr>
-                      <th scope="row"><?php echo $student['id']; ?></th>
-                      <td><?php printf("%s %s", $student['fname'], $student['lname']); ?></td>
-                      <td><?php echo $student['roll']; ?></td>
-                      <td><?php echo $student['phone']; ?></td>
-                      <td>
-                        <a class="text-success link-underline-light" style="text-decoration: none;" href="index.php?task=edit&id=<?php echo $student['id']; ?>">Edit</a> |
-                         
-                        <span data-bs-toggle="modal" data-bs-target="#deleteModal<?php echo $student['id']; ?>" class="text-danger link-underline-light c" style="text-decoration: none; cursor: pointer;" >Delete</span></td>
-                    </tr>
+                  <tr>
+                     <th scope="row"><?php echo $student['id']; ?></th>
+                     <td><?php printf("%s %s", $student['fname'], $student['lname']); ?></td>
+                     <td><?php echo $student['roll']; ?></td>
+                     <td><?php echo $student['phone']; ?></td>
+                     <?php if(is_admin()): ?>
+                     <td>
+                        <a class="text-success link-underline-light" style="text-decoration: none;" href="index.php?task=edit&id=<?php echo $student['id']; ?>">Edit
+                        </a> |
+                     
+                        <span data-bs-toggle="modal" data-bs-target="#deleteModal<?php echo $student['id']; ?>" class="text-danger link-underline-light c" style="text-decoration: none; cursor: pointer;" >Delete
+                        </span>
+                     </td>
+                     <?php elseif(is_editor()): ?>
+                     <td>
+                        <a class="text-success link-underline-light" style="text-decoration: none;" href="index.php?task=edit&id=<?php echo $student['id']; ?>">Edit
+                        </a>
+                     </td>
+                     <?php endif; ?>
+                  </tr>
 
                     <!-- Modal -->
                      <div class="modal fade" id="deleteModal<?php echo $student['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -169,7 +198,12 @@
 
 
 
-        <?php if("add" == $task): ?>
+        <?php if("add" == $task): 
+            if( !(is_admin() || is_editor()) ) {
+               header("location: index.php?task=report");
+            }
+         ?>
+
            <div class="row">
             <div class="col-lg-6 offset-lg-3">
                <form action="index.php?task=add" method="POST">
@@ -200,7 +234,12 @@
         <?php endif ?>
 
 
-        <?php if("edit" == $task): 
+        <?php if( "edit" == $task ): 
+            // without login user as a is_admin or is_editor user will return index.php?task=report page
+            if( !(is_admin() || is_editor()) ) {
+               header("location: index.php?task=report");
+            }
+
             $id = filter_input(INPUT_GET,'id',FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             $studentData = getStudent($id);
             if( $studentData ){
