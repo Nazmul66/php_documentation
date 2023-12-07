@@ -7,6 +7,7 @@
    print_r($array1);
    print_r($array2);
 
+   // first way to array merge
    //  $arrayFull = array_merge($array1, $array2);
    $arrayFull = $array1 + $array2;
    print_r($arrayFull);
