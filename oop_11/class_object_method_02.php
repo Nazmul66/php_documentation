@@ -24,8 +24,8 @@
       }
    }
 
-$human = new Human();
-$human2 = new Human();
+$human = new Human("");
+$human2 = new Human("");
 
 $human->name = "rahul";
 $human2->name = "rukhsana";

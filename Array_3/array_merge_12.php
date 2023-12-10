@@ -10,6 +10,6 @@
    // first way to array merge
    //  $arrayFull = array_merge($array1, $array2);
    $arrayFull = $array1 + $array2;
-   print_r($arrayFull);
 
+   
 ?>

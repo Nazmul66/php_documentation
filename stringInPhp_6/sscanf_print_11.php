@@ -10,4 +10,8 @@
 //   echo $fname;
 //   echo $lname;
 
+$rgb = "#ffe5e5";
+$colors = sscanf($rgb, "#%2x%2x%2x");
+print_r($colors) ;
+
 ?>
