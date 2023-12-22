@@ -1,0 +1,51 @@
+a{
+    text-decoration: none;
+}
+.form_box,
+.store_box {
+    margin-top: 20px;
+    padding: 30px 45px 45px;
+    box-shadow: 10px 15px 40px rgba(0,0,0,0.5);
+}
+
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 228px !important;
+    height: 100vh;
+    padding: 80px 40px 0px !important;
+    background-color: #e5e5e5;
+    z-index: 10;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+  margin-top: 40px;
+}
+ul li{
+  display: block;
+  margin: 12px 0;
+}
+ul li a{
+    color: #7825b3;
+}
+
+thead > tr > th,
+tbody > tr > th,
+tbody > tr > td {
+  color: #6C757D;
+}
+
+input[type="search"]{
+  outline: none;
+  width: 100%;
+  padding: 6px 18px;
+  border-radius: 6px;
+  border: 1px solid #CED4DA;
+}
+
+hr{
+  
+}

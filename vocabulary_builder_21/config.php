@@ -2,7 +2,7 @@
 
 // 2 way database can be connected
 
- $DB_Name = "tasks";
+ $DB_Name = "words";
  $DB_User = "root";
  $DB_Password = "";
  $DB_Host = "localhost";
@@ -19,7 +19,7 @@
     throw new Exception("database is not connected");
  } 
  else{
-   //  echo "database is connected";
+    // echo "database is connected";
  }
 
 ?>
