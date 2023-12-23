@@ -1,4 +1,10 @@
 <?php
+   session_start();
+   $user_id = $_SESSION['id'] ?? 0;
+   if($user_id){
+      header("Location: allWord.php");
+   }
+   include "function.php";
    include "header.php";
 ?>
 
@@ -14,8 +20,8 @@
                     <h5 class="text-secondary text-center mb-3">Login</h5>
 
                     <div class="mb-3">
-                        <label for="Email" class="form-label text-secondary">Email</label>
-                        <input type="Email" name="Email" class="form-control" id="Email" placeholder="Email Address">
+                        <label for="email" class="form-label text-secondary">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
                     </div>
 
                     <div class="mb-3">
@@ -23,7 +29,15 @@
                         <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                     </div>
 
-                    <input type="submit" class="btn btn-success" value="Login">
+                     <!-- NOTE: Error msg could be shown -->
+                     <?php
+                      if( isset($_GET['status']) ){
+                         $status = $_GET['status'] ?? 0;
+                         echo getStatusMessage($status) . "<br>";
+                      }
+                    ?>
+
+                    <input type="submit" class="btn btn-success mt-3" value="Login">
                     <input type="hidden" name="action" value="login">
                  </form>
 
@@ -36,11 +50,6 @@
     </div>
   </div>
 
-<script>
-  const locations = window.location.href;
-  const split = locations.split("/")[5];
-  console.log(split)
-</script>
 <?php
    include "footer.php";
 ?>

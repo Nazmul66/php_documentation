@@ -1,4 +1,9 @@
 <?php
+   session_start();
+   $user_id = $_SESSION['id'] ?? 0;
+   if(!$user_id){
+      header("Location: index.php");
+   }
    include "header.php";
 ?>
 
@@ -14,20 +19,21 @@
        <div class="col-lg-12">
            <div class="form">
               <div class="form_box">
-                 <form method="POST" action="">
+                 <form method="POST" action="tasks.php">
                     <h5 class="text-secondary text-center mb-3">Add New Word</h5>
 
                     <div class="mb-3">
                         <label for="text" class="form-label text-secondary">Word</label>
-                        <input type="text" name="text" class="form-control" id="text" placeholder="Word">
+                        <input type="text" name="word" class="form-control" id="text" placeholder="Word">
                     </div>
 
                     <div class="mb-3">
                         <label for="Meaning" class="form-label text-secondary">Meaning</label>
-                        <textarea class="form-control" name="Meaning" id="Meaning" placeholder="Meaning"></textarea>
+                        <textarea class="form-control" name="meaning" id="Meaning" placeholder="Meaning"></textarea>
                     </div>
 
                     <input type="submit" class="btn btn-success" value="Add Word">
+                    <input type="hidden" name="action" value="addWord">
                  </form>
               </div>
            </div>

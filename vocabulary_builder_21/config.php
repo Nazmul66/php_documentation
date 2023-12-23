@@ -15,8 +15,11 @@
  $connection = mysqli_connect( $DB_Host, $DB_User, $DB_Password, $DB_Name);
 // $connection = mysqli_connect(DB_Host, DB_User, DB_Password, DB_Name);
 
+// 
+mysqli_set_charset($connection, "utf8");
+
  if(!$connection){
-    throw new Exception("database is not connected");
+    die("database is not connected");
  } 
  else{
     // echo "database is connected";

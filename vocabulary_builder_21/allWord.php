@@ -1,7 +1,12 @@
 <?php
+   session_start();
+   $user_id = $_SESSION['id'] ?? 0;
+   if(!$user_id){
+      header("Location: index.php");
+   }
+   include "function.php";
    include "header.php";
 ?>
-
 
     <!-- sidebar section -->
     <?php include "sidebar.php"; ?>
@@ -16,16 +21,25 @@
               <div class="store_box">
                 <div class="row">
                    <div class="col-lg-4">
-                      <select class="form-select text-secondary" name="selectBox">
-                        <option class="text-secondary" disabled selected>With selected</option>
-                        <option class="text-secondary" value="a">#a</option>
-                        <option class="text-secondary" value="b">#b</option>
-                        <option class="text-secondary" value="c">#c</option>
-                     </select>
+                     <form method="GET" action="allWord.php">
+                        <div class="d-flex">
+                           <select class="form-select text-secondary" name="selectBox">
+                              <option class="text-secondary" disabled selected>All Words</option>
+                              <option class="text-secondary" value="a-z" <?php if(isset($_GET['selectBox']) && $_GET['selectBox']  == "a-z"){ echo "selected"; } ?> >A to Z (Ascending Order)</option>
+                              <option class="text-secondary" value="z-a" <?php if(isset($_GET['selectBox']) && $_GET['selectBox'] == "z-a"){ echo "selected"; } ?> >Z to A (Descending Order)</option>
+                           </select>
+                           <input type="submit" class="btn btn-primary ms-3" name="action" value="sorts">
+                        </div>
+                     </form>
                    </div>
 
                    <div class="col-lg-4 offset-lg-4">
-                     <input type="search" name="search" placeholder="Search Here">
+                     <form method="POST" action="">
+                        <div class="d-flex">
+                           <input type="search" name="search" placeholder="Search Here">
+                           <input type="submit" name="submit" class="btn btn-primary ms-3" value="submit"> 
+                        </div>
+                     </form>
                    </div>
                 </div>
 
@@ -34,19 +48,48 @@
                 <table class="table">
                     <thead>
                         <tr>
-                          <th scope="col">Word</th>
-                          <th scope="col">Definition</th>
+                          <th scope="col" style="width: 20%;">Word</th>
+                          <th scope="col" style="width: 80%;">Definition</th>
                         </tr> 
                     </thead>
                     <tbody>
-                        <tr>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
+                    <?php 
+                     // sorting Ascending and descending
+                     $sort = "";
+                     if(isset($_GET['selectBox'])){
+                           if($_GET['selectBox'] == "a-z") {
+                              $sort = "ASC";
+                           }
+                           else if($_GET['selectBox'] == "z-a") {
+                              $sort = "DESC";
+                           }
+                     }
+
+                      //  for search to find data
+                      if(isset($_POST['submit'])){
+                          $search = $_POST['search'];
+                          $getData = getWords($user_id, $sort, $search); 
+                      }
+                      else{
+                          $getData = getWords($user_id, $sort); 
+                      }
+
+
+
+
+                        if(count($getData) > 0){
+
+                           $length = count($getData);
+                           for( $i=0; $i < $length; $i++ ){
+                           ?>
+                            <tr>
+                              <td style="width: 20%;"><?php echo $getData[$i]['word'] ?></td>
+                              <td style="width: 80%;"><?php echo $getData[$i]['meaning'] ?></td>
+                            </tr>
+                           <?php 
+                             }
+                           }
+                        ?>
                     </tbody>
                 </table>
               </div>
