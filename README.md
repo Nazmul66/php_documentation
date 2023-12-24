@@ -9,7 +9,7 @@
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/multiple_table_combine_get_data_22.5.png) 
 
 ## (Module:22.6 & 22.7) ---> Multiple different Table ( Inner Join ) to get data 
-![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/Multiple_table_combine_using_Join_22.6.7.png.png) 
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/Multiple_table_combine_using_Join_22.6.7.png) 
 
 ## (Module:22.8) ---> SQL table group by closure with aggregation function
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/sql_groupBy_closure_aggregation_function_22.8.png) 
