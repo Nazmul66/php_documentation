@@ -20,13 +20,14 @@
 
         //NOTE: mysqli error result won't show
         if ( mysqli_error($connection) ) {
+            // echo mysqli_error($connection);
              $statusCode = 1;
          }
          else{
             $statusCode = 3;
          }
-      //   header("location: register.php?status={$statusCode}");
-        header("location: register.php");
+        header("location: register.php?status={$statusCode}");
+      //   header("location: register.php");
      }
 
      else if("login" == $action){
@@ -78,10 +79,6 @@
      }
 
 
-
-
   }
-
-
 
 ?>

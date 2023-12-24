@@ -15,6 +15,7 @@ function getStatusMessage ($Status= 0) {
     return $ErrorStatus[$Status];
 }
 
+
 function getWords($user_id, $sort, $search=null) {
     global $connection; 
     $data = array();
