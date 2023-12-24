@@ -31,7 +31,7 @@ $human->name = "rahul";
 $human2->name = "rukhsana";
 echo $human->name;
 echo $human2->name;
-$cat = new Cat();
+$cat = new Cat("");
 $dog = new Dog();
 
 
