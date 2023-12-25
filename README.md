@@ -1,4 +1,4 @@
-# MYSQL Database Command used Different Types Queries, Here Below ------>
+# (Module:22) MYSQL Database Command Different Types Queries, Here Below ------>
 ## (Module:22.3) ---> SQL with data Grouping
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/Group_by_SQL_Query_22.3.png) 
 
@@ -39,3 +39,29 @@
 
 ## (Module:22.16) ---> SQL RIGHT JOIN    
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/SQL_Right_Join_22.16.png)
+
+
+# (Module:27) MYSQL Extra Command Different Types Queries, Here Below ------>
+## (Module:27.1) ---> MYSQL data import and data filter with new table   
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_Extra/SQL_rand()_data_27.1.png)
+
+## (Module:27.2) ---> Select query if else usable   
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_Extra/Select_query_if_else_usable_27.2.png)
+
+## (Module:27.3) ---> another table to filter data with that main table   
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_Extra/another_table_to_filter_data_with_that_main_table_27.3.png)
+
+## (Module:27.4) ---> another table to filter data with that main table   
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_Extra/mysql_random_function_27.4.png)
+
+## (Module:27.5) ---> List ELT() functions to random data select 
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_Extra/list_ELT()_function_random_select_27.5.png)
+
+## (Module:27.6) ---> list to randomly selected data table update
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_Extra/list_to_randomly_selected_data_table_update_27.6.png)
+
+## (Module:27.7) ---> updated statement variable use for table column increment
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_Extra/updated_statement_variable_use_for_table_column_increment_27.7.png)
+
+## (Module:27.9) ---> Different way a mysql table duplicated
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_Extra/Different_way_mysql_table_duplicated_27.9.png)
