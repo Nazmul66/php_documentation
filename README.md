@@ -87,3 +87,7 @@
 ## (Module:28.9) ---> Store procedure work with OUT variables
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_stored_Procedure_28/Store_procedure_work_with_OUT_variables_28.9_part-1.png)
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/MYSQL_stored_Procedure_28/Store_procedure_work_with_OUT_variables_28.9_part-2.png)
+
+# (Module:31) Sqlite Different Types Command on command prompt, Here Below ------>
+## (Module:31.2) ---> Sqlite database create and basic operation
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/SQLITE_31/Sqlite_database_create_and_basic_operation_31.2.png)
