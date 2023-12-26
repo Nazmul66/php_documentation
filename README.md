@@ -1,3 +1,6 @@
+# Install composer globally use this command code
++ composer global require laravel/installer
+
 # (Module:22) MYSQL Database Different Types Command Queries, Here Below ------>
 ## (Module:22.3) ---> SQL with data Grouping
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/Group_by_SQL_Query_22.3.png) 
