@@ -91,3 +91,11 @@
 # (Module:31) Sqlite Different Types Command on command prompt, Here Below ------>
 ## (Module:31.2) ---> Sqlite database create and basic operation
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/SQLITE_31/Sqlite_database_create_and_basic_operation_31.2.png)
+
+# (Module:32) Composer command prompt, Here Below ------>
+## (Module:32.2) ---> Composer installation
+### Go to (https://getcomposer.org/) -> Click Download button -> Windows Installer (Composer-Setup.exe), It will download the composer
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/composer_32/Composer_installation_32.2.png)
+
+## (Module:32.3) ---> Composer update remove version change etc
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/composer_32/Composer_update_remove_version_change_32.3.png)
