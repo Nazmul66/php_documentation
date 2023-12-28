@@ -1,6 +1,31 @@
 # Install composer globally use this command code
 + composer global require laravel/installer
 
+## Fixing about composer package have any kind of error, just use this document system, here is below ---->
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/composer_any_package_installation_problem_solver.png)
+
+## Fixing about laravel installing system
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/laravel_installing_problem_fix.png)
+
+### If you have face this kind of error about installing laravel package then here below to fix this problem ----> 
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/laravel_installing_problem.png)
+
+## Fixing about laravel database system
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/database_connection_problem.png)
+
+### If you have face this kind of error about connection database with laravel package then here below to fix this problem ----> 
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/database_connection_fix.png)
+
+
+
+
+
+
+
+
+
+
+
 # (Module:22) MYSQL Database Different Types Command Queries, Here Below ------>
 ## (Module:22.3) ---> SQL with data Grouping
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/Group_by_SQL_Query_22.3.png) 
