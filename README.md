@@ -1,14 +1,20 @@
 # Install composer globally use this command code
 + composer global require laravel/installer
 
+<hr>
+
 ## Fixing about composer package have any kind of error, just use this document system, here is below ---->
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/composer_any_package_installation_problem_solver.png)
 
+<hr>
+
 ## Fixing about laravel installing system
-![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/laravel_installing_problem_fix.png)
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/laravel_installing_problem.png)
+
+<hr>
 
 ### If you have face this kind of error about installing laravel package then here below to fix this problem ----> 
-![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/laravel_installing_problem.png)
+![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/laravel_installing_problem_fix.png)
 
 ## Fixing about laravel database system
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/database_connection_problem.png)
@@ -18,7 +24,7 @@
 
 
 
-
+<hr>
 
 
 
