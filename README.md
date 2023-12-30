@@ -11,10 +11,10 @@
 ## Fixing about laravel installing system
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/laravel_installing_problem.png)
 
-<hr>
-
 ### If you have face this kind of error about installing laravel package then here below to fix this problem ----> 
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/laravel_installing_problem_fix.png)
+
+<hr>
 
 ## Fixing about laravel database system
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/database_connection_problem.png)
@@ -23,12 +23,7 @@
 ![Alt Text](https://github.com/Nazmul66/php_documentation/blob/main/Asset/problem_solver/database_connection_fix.png)
 
 
-
 <hr>
-
-
-
-
 
 
 

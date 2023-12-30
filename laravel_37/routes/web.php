@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +31,8 @@ Route::get("/say/{name}", [MainController::class, "sayMyName"]);
 Route::get("/contact", [MainController::class, "contact"]);
 Route::get("/view", [MainController::class, "view"]);
 Route::get("/about/{taka}", [MainController::class, "aboutUs"]);
+Route::get("/people", [MainController::class, "allPeople"]);
+Route::get("/test", [MainController::class, "testModel"]);
 
 Route::get('/hello/{data}', function ($world) {
     // return "hello world";
@@ -55,4 +59,11 @@ Route::post('/say', function (Request $request){
         "greet"=>$greeting
     ]);
 });
+
+
+// formController routes
+Route::get('/form', [FormController::class, 'displayForm'])->name('form.create');
+Route::post('/save', [FormController::class, 'saveForm'])->name('form.save');
+
+route::get('/post', [PostController::class, 'createPost']);
 
